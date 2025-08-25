@@ -1,0 +1,58 @@
+.overlay
+{
+     position: fixed;
+     top: 0;
+     left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.spinner
+{
+
+    height:40px;
+    width:40px;
+    margin:auto;
+    margin-top:250px;
+    position: relative;
+   
+}
+.spinner::after{
+    content:"";
+    border-radius: 50%;
+    border-top:2px solid grey;
+     position: absolute;
+     inset:0;
+     border-bottom:1px solid white;
+    border-left:1px solid white ;
+    border-right:2px solid grey ;
+    animation: spinning 0.8s linear infinite;
+}
+.logo
+{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    position: absolute;
+     background-image: url('zoox.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+@keyframes spinning{
+
+    from{
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform:rotate(360deg);
+    }
+
+
+}
